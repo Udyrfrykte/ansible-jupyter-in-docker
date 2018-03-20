@@ -1,0 +1,19 @@
+# User whitelist - set of users allowed to use the Hub
+c.Authenticator.whitelist = { '{{ jupyter_authorized_users | unique | join("', '") }}' }
+
+# Administrators - set of users who can administer the Hub itself
+c.Authenticator.admin_users = { '{{ jupyter_authorized_users | unique | join("', '") }}' }
+
+# Authenticator
+from oauthenticator.github import GitHubOAuthenticator
+c.JupyterHub.authenticator_class = GitHubOAuthenticator
+c.GitHubOAuthenticator.client_id = '{{ jupyter_client_id }}'
+c.GitHubOAuthenticator.client_secret = '{{ jupyter_client_secret }}'
+
+# Spawner
+from simplespawner import SimpleLocalProcessSpawner
+c.JupyterHub.spawner_class = SimpleLocalProcessSpawner
+c.Spawner.http_timeout = 120
+c.Spawner.cmd = ['conda_bootstrap.sh', '/opt/conda/bin/python', '/opt/conda/bin/jupyterhub-singleuser']
+c.Spawner.args = ['--allow-root']
+c.SimpleLocalProcessSpawner.home_path_template = '/workspaces/{username}'

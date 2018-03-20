@@ -1,0 +1,24 @@
+---
+
+- name: Gather network info for port forwarding
+  setup:
+    gather_subset: network
+
+- name: Create jupyter directories
+  become: true
+  file:
+    path: "{{ item }}"
+    state: directory
+    recurse: true
+  with_items:
+    - "{{ jupyter_conf_location }}"
+    - "{{ jupyter_runtime_location }}"
+    - "{{ jupyter_data_location }}"
+
+- name: Configure jupyterhub
+  become: true
+  template:
+    src: jupyterhub_config.py.j2
+    dest: "{{ jupyter_conf_location }}/jupyterhub_config.py"
+
+- import_tasks: run_container.yml

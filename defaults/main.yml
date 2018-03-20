@@ -1,0 +1,22 @@
+---
+
+# Name of the jupyter docker container
+jupyter_image_version: '0.8.1-0'
+
+# GitHub users that are authorized to log into JupyterHub (mandatory)
+# jupyter_authorized_users: []
+# GitHub OAuth client ID (mandatory)
+# jupyter_client_id: '<Client ID obtained from GitHub>'
+# GitHub OAuth client secret (mandatory)
+# jupyter_cient_secret: '<Client secret obtained from GitHub>'
+
+
+# Name of the jupyter docker container
+jupyter_container_name: jupyterhub
+
+jupyter_root_location: "/opt/docker-data/{{ jupyter_container_name }}"
+
+# Path on the host filesystem where the jupyter data will be
+jupyter_conf_location: "{{ jupyter_root_location }}/conf"
+jupyter_runtime_location: "{{ jupyter_root_location }}/runtime"
+jupyter_data_location: "{{ jupyter_root_location }}/data"

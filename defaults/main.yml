@@ -1,7 +1,7 @@
 ---
 
 # Name of the jupyter docker container
-jupyter_image_version: '0.8.1-0'
+jupyter_image_version: '0.8.1-1'
 
 jupyter_url: 'http//127.0.0.1:8000'
 

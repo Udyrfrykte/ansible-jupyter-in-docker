@@ -15,6 +15,6 @@ c.GitHubOAuthenticator.oauth_callback_url = '{{ jupyter_url }}/hub/oauth_callbac
 from simplespawner import SimpleLocalProcessSpawner
 c.JupyterHub.spawner_class = SimpleLocalProcessSpawner
 c.Spawner.http_timeout = 120
-c.Spawner.cmd = ['conda_bootstrap.sh', '/opt/conda/bin/python', '/opt/conda/bin/jupyterhub-singleuser']
+c.Spawner.cmd = ['conda_bootstrap.sh', 'jupyterhub-singleuser']
 c.Spawner.args = ['--allow-root']
 c.SimpleLocalProcessSpawner.home_path_template = '/workspaces/{username}'

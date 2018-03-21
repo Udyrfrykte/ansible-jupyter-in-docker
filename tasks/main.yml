@@ -1,9 +1,5 @@
 ---
 
-- name: Gather network info for port forwarding
-  setup:
-    gather_subset: network
-
 - name: Create jupyter directories
   become: true
   file:

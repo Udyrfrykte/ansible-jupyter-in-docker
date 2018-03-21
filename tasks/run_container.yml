@@ -13,5 +13,3 @@
       - "{{ jupyter_conf_location }}/jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py:ro"
       - "{{ jupyter_runtime_location }}:/srv/jupyterhub"
       - "{{ jupyter_data_location }}:/workspaces"
-    published_ports:
-      - "{{ ansible_docker0.ipv4.address }}:8000:8000"

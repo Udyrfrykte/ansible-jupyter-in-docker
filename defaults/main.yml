@@ -22,3 +22,5 @@ jupyter_root_location: "/opt/docker-data/{{ jupyter_container_name }}"
 jupyter_conf_location: "{{ jupyter_root_location }}/conf"
 jupyter_runtime_location: "{{ jupyter_root_location }}/runtime"
 jupyter_data_location: "{{ jupyter_root_location }}/data"
+
+jupyter_users_slots: 10000

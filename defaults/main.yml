@@ -3,6 +3,8 @@
 # Name of the jupyter docker container
 jupyter_image_version: '0.8.1-0'
 
+jupyter_url: 'http//127.0.0.1:8000'
+
 # GitHub users that are authorized to log into JupyterHub (mandatory)
 # jupyter_authorized_users: []
 # GitHub OAuth client ID (mandatory)

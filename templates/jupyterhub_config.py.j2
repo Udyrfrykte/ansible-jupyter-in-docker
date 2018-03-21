@@ -9,6 +9,7 @@ from oauthenticator.github import GitHubOAuthenticator
 c.JupyterHub.authenticator_class = GitHubOAuthenticator
 c.GitHubOAuthenticator.client_id = '{{ jupyter_client_id }}'
 c.GitHubOAuthenticator.client_secret = '{{ jupyter_client_secret }}'
+c.GitHubOAuthenticator.oauth_callback_url = '{{ jupyter_url }}/hub/oauth_callback'
 
 # Spawner
 from simplespawner import SimpleLocalProcessSpawner

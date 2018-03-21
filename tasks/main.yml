@@ -16,5 +16,6 @@
   template:
     src: jupyterhub_config.py.j2
     dest: "{{ jupyter_conf_location }}/jupyterhub_config.py"
+  notify: restart jupyter
 
 - import_tasks: run_container.yml

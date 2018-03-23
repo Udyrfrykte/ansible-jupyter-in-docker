@@ -2,7 +2,7 @@
 c.Authenticator.whitelist = { '{{ jupyter_authorized_users | join("', '") }}' }
 
 # Administrators - set of users who can administer the Hub itself
-c.Authenticator.admin_users = { '{{ jupyter_authorized_users | join("', '") }}' }
+# c.Authenticator.admin_users = { '{{ jupyter_authorized_users | join("', '") }}' }
 
 # Authenticator
 from oauthenticator.github import GitHubOAuthenticator

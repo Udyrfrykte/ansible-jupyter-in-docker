@@ -1,7 +1,7 @@
 ---
 
 # Name of the jupyter docker container
-jupyter_image_version: '0.8.1-1'
+jupyter_image_version: '0.8.1-2'
 
 jupyter_url: 'http//127.0.0.1:8000'
 
@@ -23,4 +23,6 @@ jupyter_conf_location: "{{ jupyter_root_location }}/conf"
 jupyter_runtime_location: "{{ jupyter_root_location }}/runtime"
 jupyter_data_location: "{{ jupyter_root_location }}/data"
 
+# Number of slot available for the random allocation of userids
+# Do not modify after first installation
 jupyter_users_slots: 10000

@@ -14,5 +14,5 @@ c.GitHubOAuthenticator.oauth_callback_url = '{{ jupyter_url }}/hub/oauth_callbac
 # Spawner
 from jupyterhub.spawner import LocalProcessSpawner
 c.JupyterHub.spawner_class = LocalProcessSpawner
-c.Spawner.http_timeout = 120
+c.Spawner.http_timeout = 300
 c.Spawner.cmd = ['conda_bootstrap.sh', 'jupyterhub-singleuser']

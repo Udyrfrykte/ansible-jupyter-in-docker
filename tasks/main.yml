@@ -23,6 +23,13 @@
     dest: "{{ jupyter_conf_location }}/jupyterhub_config.py"
   notify: restart jupyter
 
+- name: Configure jupyterhub servers
+  become: true
+  template:
+    src: jupyterhub-singleuser_config.py.j2
+    dest: "{{ jupyter_conf_location }}/jupyterhub-singleuser_config.py"
+  notify: restart jupyter
+
 - name: Create jupyter users directories
   become: true
   file:

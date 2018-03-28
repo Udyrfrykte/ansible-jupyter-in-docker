@@ -11,6 +11,7 @@
     restart: "{{ jupyter_docker_restart | default(false) | bool }}"
     volumes:
       - "{{ jupyter_conf_location }}/jupyterhub_config.py:/srv/jupyterhub/jupyterhub_config.py:ro"
+      - "{{ jupyter_conf_location }}/jupyterhub-singleuser_config.py:/srv/jupyterhub/jupyterhub-singleuser_config.py:ro"
       - "{{ jupyter_conf_location }}/etc_passwd:/etc/passwd:ro"
       - "{{ jupyter_conf_location }}/etc_shadow:/etc/shadow:ro"
       - "{{ jupyter_runtime_location }}:/srv/jupyterhub"

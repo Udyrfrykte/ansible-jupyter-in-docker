@@ -10,7 +10,7 @@ jupyter_url: 'http//127.0.0.1:8000'
 # GitHub OAuth client ID (mandatory)
 # jupyter_client_id: '<Client ID obtained from GitHub>'
 # GitHub OAuth client secret (mandatory)
-# jupyter_cient_secret: '<Client secret obtained from GitHub>'
+# jupyter_client_secret: '<Client secret obtained from GitHub>'
 
 
 # Name of the jupyter docker container

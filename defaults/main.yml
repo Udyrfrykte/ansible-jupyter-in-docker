@@ -26,3 +26,9 @@ jupyter_data_location: "{{ jupyter_root_location }}/data"
 # Number of slot available for the random allocation of userids
 # Do not modify after first installation
 jupyter_users_slots: 10000
+
+jupyter_docker_networks: []
+#jupyter_docker_networks:
+#  - name: "docker_network"
+
+jupyter_container_restart_policy: "always"

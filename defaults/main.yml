@@ -29,6 +29,6 @@ jupyter_users_slots: 10000
 
 jupyter_docker_networks: []
 #jupyter_docker_networks:
-#  - name: "docker_network"
+#  - name: docker_network
 
-jupyter_container_restart_policy: "always"
+jupyter_container_restart_policy: 'unless-stopped'

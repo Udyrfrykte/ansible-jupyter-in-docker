@@ -37,6 +37,7 @@
     state: directory
     owner: "{{ 10000 + (jupyter_users_slots | random(seed=item)) }}"
     group: root
+    recurse: true
   with_items: "{{ jupyter_authorized_users | map('lower') | list }}"
 
 - name: Configure jupyter users
@@ -45,6 +46,7 @@
     src: etc_passwd.j2
     dest: "{{ jupyter_conf_location }}/etc_passwd"
     mode: 0644
+  notify: restart jupyter
 
 - name: Configure jupyter passwords
   become: true
